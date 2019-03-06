@@ -1,0 +1,33 @@
+.alert {
+/*color: #6C4CC4 !important;*/
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 18px;
+  /*display: block;*/
+  text-align: center;
+}
+
+:host .center{
+  align-self: center;
+}
+
+:host .spinner {
+    -webkit-box-pack: initial;
+    -ms-flex-pack: inherit;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 20px;
+    padding: 16px 10px 10px;
+    border: solid 1px transparent;
+    background-color: #fff;
+    cursor: pointer;
+  }

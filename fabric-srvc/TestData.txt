@@ -1,0 +1,28 @@
+
+{
+    "$class": "com.dtlab.hackathon.assets.Account",
+    "id": "101",
+    "sortCode": 101111,
+    "accountNumber": 20123456,
+    "accountType": "PersonalAccount",
+    "amount": 4440,
+    "asOfDate": "2018-10-30T08:13:06.821Z"
+  },
+  {
+    "$class": "com.dtlab.hackathon.assets.Account",
+    "id": "102",
+    "sortCode": 202222,
+    "accountNumber": 30567891,
+    "accountType": "PersonalAccount",
+    "amount": 5550,
+    "asOfDate": "2018-10-30T08:13:06.821Z"
+  }
+
+{"$class": "com.dtlab.hackathon.transactions.MovementRequest",
+  "transactionType": "Debit",
+  "transactionRefText": "TestRef1",
+  "transactionTime": "2018-10-30T10:13:06.952Z",
+  "transactionValue": 50,
+  "account": "com.dtlab.hackathon.assets.Account#101",
+  "payeeAccount": "com.dtlab.hackathon.assets.Account#102"
+}

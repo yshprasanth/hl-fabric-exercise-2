@@ -1,0 +1,20 @@
+/*
+* Model definitions for Hackathon
+*/
+namespace com.dtlab.hackathon.events
+
+import com.dtlab.hackathon.common.TransactionType
+import com.dtlab.hackathon.assets.Account
+
+event MovementNotification {
+  o String srcAccountId
+  o Double srcAccountBalanceAfterTransaction optional
+  o String trgAccountId
+  o Double trgAccountBalanceAfterTransaction optional
+  o TransactionType transactionType
+  o String transactionRefText
+  o DateTime transactionTime
+  o Double transactionValue
+  --> Account srcAccount
+  --> Account trgAccount
+}

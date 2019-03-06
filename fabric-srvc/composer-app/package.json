@@ -1,0 +1,27 @@
+{
+  "name": "dtlab-hackathon-app",
+  "version": "0.0.1",
+  "description": "DTLab Hackathon App",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Sri Yalamanchili",
+  "email": "yshprasanth@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "latest",
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "^0.20.0",
+    "composer-connector-embedded": "latest",
+    "config": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest",
+    "winston": "latest"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+/*
+* Model definitions for Hackathon
+*/
+namespace com.dtlab.hackathon.assets
+
+import com.dtlab.hackathon.common.AccountType
+import com.dtlab.hackathon.common.TransactionType
+
+asset Account identified by id {
+  o String id
+  o Integer sortCode
+  o Integer accountNumber
+  o AccountType accountType
+  o Double amount
+  o DateTime asOfDate
+}
+
+asset MovementItem identified by id {
+  o String id
+  o String accountId
+  o TransactionType transactionType
+  o String transactionRefText
+  o DateTime transactionTime optional
+  o Double transactionValue
+  o Double accountBalanceAfterTransaction optional
+  o String otherAccountId optional
+  o String fromAccountName optional
+  o String payeeId optional
+  o String payeeName optional
+}

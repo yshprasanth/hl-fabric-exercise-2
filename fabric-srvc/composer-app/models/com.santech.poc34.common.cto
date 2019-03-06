@@ -1,0 +1,18 @@
+/*
+* Model definitions for Hackathon
+*/
+namespace com.dtlab.hackathon.common
+
+enum AccountType {
+  o PersonalAccount
+  o SavingsAccount
+  o CurrentAccount
+  o ExternalAccount
+  o InternalAccount
+  
+}
+
+enum TransactionType {
+  o Debit
+  o Credit
+}

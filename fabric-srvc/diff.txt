@@ -1,0 +1,15 @@
+diff -r client-app/src/app/app.component.html client-app-with-api/src/app/app.component.html
+18c18
+<         <p class="navbar-brand">client-app</p>
+---
+>         <p class="navbar-brand">client-app-with-api</p>
+diff -r client-app/src/app/home/home.component.html client-app-with-api/src/app/home/home.component.html
+16c16
+< 		<h1>client-app</h1>
+---
+> 		<h1>client-app-with-api</h1>
+diff -r client-app/src/index.html client-app-with-api/src/index.html
+18c18
+<   <title>client-app</title>
+---
+>   <title>client-app-with-api</title>

@@ -1,0 +1,17 @@
+/*
+* Model definitions for Hackathon
+*/
+namespace com.dtlab.hackathon.participants
+
+import com.dtlab.hackathon.assets.Account
+
+abstract participant User identified by id {
+  o String id
+  --> Account[] account optional
+}
+
+participant Customer extends User {
+  o String firstName regex=/[A-z]+/
+  o String lastName regex=/[A-z]+/
+  o String title regex=/(Mr)|(Mrs)|(Mst)|(Ms)/
+}

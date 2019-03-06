@@ -1,0 +1,36 @@
+{
+    "limit": 10000,
+    "selector": {
+        "$and": [
+            {
+                "chaincodeid": "dtlab-Hackathon-app"
+            },
+                     {   "$and": [
+                        {
+                            "$or": [
+                                {
+                                    "data.transactionType": {
+                                        "$eq": "com.dtlab.hackathon.InternalTransfer"
+                                    }
+                                },
+                                {
+                                    "data.transactionType": {
+                                        "$eq": "com.dtlab.hackathon.DirectDebit"
+                                    }
+                                },            
+                            {
+                                "data.eventEmitted.personalAccount": {
+                                    "$eq": "com.dtlab.hackathon.Account#pa1"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "data.$class": "org.hyperledger.composer.system.HistorianRecord",
+                "data.$registryId": "org.hyperledger.composer.system.HistorianRecord",
+                "data.$registryType": "Asset"
+            }
+        ]
+    },
+    "skip": 0
+}

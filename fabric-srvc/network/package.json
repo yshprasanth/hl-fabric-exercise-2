@@ -1,0 +1,15 @@
+{
+  "name": "dtlab_network",
+  "version": "0.0.1",
+  "description": "Helper Scripts to start Hyperledger Fabric v1.0 for development/test purposes",
+  "private": true,
+  "author": "Sri Yalamanchili",
+  "email": "yshprasanth@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gzip": "^1.4.0",
+    "gulp-tar": "^1.9.0",
+    "gulp-zip": "^4.0.0"
+  }
+}

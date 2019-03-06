@@ -1,0 +1,21 @@
+/*
+* Model definitions for Hackathon
+*/
+namespace com.dtlab.hackathon.transactions
+
+import com.dtlab.hackathon.common.TransactionType
+import com.dtlab.hackathon.assets.Account
+import com.dtlab.hackathon.participants.Customer
+
+transaction MovementRequest {
+  o TransactionType transactionType
+  o String transactionRefText
+  o DateTime transactionTime
+  o Double transactionValue
+  --> Account account
+  --> Account payeeAccount
+}
+
+transaction InitLedger {
+  o Boolean reload default=false
+}

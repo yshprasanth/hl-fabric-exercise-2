@@ -1,0 +1,26 @@
+/**
+ * Access control rules for dtlab-hackathon
+ */
+rule Default {
+    description: "Allow all participants access to all resources"
+    participant: "ANY"
+    operation: ALL
+    resource: "com.dtlab.hackathon.**"
+    action: ALLOW
+}
+
+rule historianAccess {
+  description: "Only allow members to read historian records referencing transactions they submitted."
+  participant: "ANY"
+  operation: READ
+  resource: "org.hyperledger.composer.system.HistorianRecord"
+  action: ALLOW
+}
+
+rule SystemACL {
+  description:  "System ACL to permit all access"
+  participant: "ANY"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW
+}

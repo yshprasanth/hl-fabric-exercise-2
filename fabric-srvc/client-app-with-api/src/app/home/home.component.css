@@ -1,0 +1,113 @@
+/* * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */
+
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+:host .container {
+  width: 900px;
+  margin: 30px 30px;
+  align-self: center;
+}
+
+:host .margin {
+  margin: 30px 30px;
+}
+
+:host .asset {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 350px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  padding: 16px 10px 10px;
+  border: solid 1px transparent;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+:host .left{
+  align-self: left;
+}
+
+:host .right{
+  align-self: right;
+}
+
+:host .center{
+  align-self: center;
+}
+
+:host .spinner {
+    -webkit-box-pack: initial;
+    -ms-flex-pack: inherit;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 50px;
+    padding: 16px 10px 10px;
+    border: solid 1px transparent;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+:host .with-link:hover {
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px #6C4CC4 !important;
+}
+
+:host .title {
+    color: #6C4CC4;
+    font-family: "Open Sans";
+    font-size: 32px;
+    display: block;
+    text-align: center;
+  }
+
+:host .account-number {
+  font-family: "Open Sans Bold";
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: auto;
+  display: block;
+  text-align: center;
+}
+
+:host .account-balance {
+    color: #666666;
+    font-family: "Open Sans SemiBold";
+    font-size: 52px;
+    margin: 0;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: wide;
+    text-align: center; }

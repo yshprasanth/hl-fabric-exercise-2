@@ -1,0 +1,115 @@
+/*
+ * Queries for DTLab Hackathon App
+ */
+
+/*
+ * Account Queries
+ */
+query selectAccounts {
+  description: "Select all Accounts"
+  statement:
+      SELECT com.dtlab.hackathon.assets.Account
+}
+
+query selectAccountsByType {
+  description: "Select all Accounts based on their main type"
+  statement:
+      SELECT com.dtlab.hackathon.assets.Account
+          WHERE (accountType==_$type)
+}
+
+query selectAccountsWithHighBalance {
+  description: "Select Accounts based on balance"
+  statement:
+      SELECT com.dtlab.hackathon.assets.Account
+          WHERE (amount > 100000)
+}
+
+/*
+ * Product Queries
+ */
+// query selectProducts {
+//   description: "Select all Products"
+//   statement:
+//       SELECT com.dtlab.hackathon.assets.Product
+// }
+
+// query selectProductsByType {
+//   description: "Select all Products for a given type"
+//   statement:
+//       SELECT com.dtlab.hackathon.assets.Product
+//         WHERE (productType == _$productType)
+// }
+
+/*
+ * MovementItem Queries
+ */
+query selectMovementItems {
+  description: "Select all MovementItems"
+  statement:
+      SELECT com.dtlab.hackathon.assets.MovementItem
+}
+
+query selectMovementItemsByAccount {
+  description: "Select all MovementItems for a given account"
+  statement:
+      SELECT com.dtlab.hackathon.assets.MovementItem
+        WHERE (accountId == _$accountId)
+        ORDER BY [transactionTime DESC, fromAccountName DESC]
+}
+
+query selectMostRecentMovementItemByAccount {
+  description: "Select most recent MovementItems for a given account"
+  statement:
+      SELECT com.dtlab.hackathon.assets.MovementItem
+/*        WHERE (accountId == _$accountId)
+*/
+        ORDER BY id DESC
+        LIMIT 1
+}
+
+/*
+ * Customer Queries
+ */
+query selectCustomerAccountsByOwner {
+  description: "Select all Accounts for a given owner"
+  statement:
+      SELECT com.dtlab.hackathon.participants.Customer
+          WHERE (id == _$customerId)
+}
+
+/*
+ * InternalTransfer Queries
+ */
+// query selectInternalTransfers {
+//   description: "Select all InternalTransfer transactions"
+//   statement:
+//       SELECT com.dtlab.hackathon.transactions.InternalTransfer
+// }
+
+// query selectInternalTransfersForAccount {
+//   description: "Select all InternalTransfer transactions for a given account"
+//   statement:
+//       SELECT com.dtlab.hackathon.transactions.InternalTransfer
+//         WHERE (fromAccount == _$fromAccount)
+// }
+
+/*
+ * MovementRequest Queries
+ */
+query selectMovementRequests {
+  description: "Select all MovementRequest transactions"
+  statement:
+      SELECT com.dtlab.hackathon.transactions.MovementRequest
+}
+
+/*
+ * HistorianRecord Queries
+ */
+query selectHistorianRecordByTransaction {
+  description: "Select All Historian Records for a given transaction Class"
+  statement: 
+      SELECT org.hyperledger.composer.system.HistorianRecord 
+        WHERE (transactionType == 'com.dtlab.hackathon.transactions.InternalTransfer' OR transactionType == 'com.dtlab.hackathon.transactions.MovementRequest')
+        ORDER BY transactionTimestamp DESC
+}
